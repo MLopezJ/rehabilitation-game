@@ -1,7 +1,7 @@
 const SerialPort = require('serialport');
 const Readline = require('@serialport/parser-readline');
 
-exports.read = () => {
+exports.read = async (io) => {
 
   const COM = 'COM6';
   const mySerial = new SerialPort(COM,{baudRate:9600}, function (err) {
@@ -9,15 +9,17 @@ exports.read = () => {
       return console.log('Error: ', err.message)
       }
   })
+
   const mySerialParser = mySerial.pipe(new Readline({ delimiter: '\n' }));
 
   // Read the port data
   mySerial.on("open", () => {
-      console.log('* Serial port', COM, ' open');
-    });
+    console.log('* Serial port', COM, ' open');
+  });
 
-  mySerialParser.on('data', data =>{
-  console.log('got word from arduino:', data);
+  await mySerialParser.on('data', data =>{
+    console.log(data)
+    io.emit('chat message', data);
   });
 
 }
