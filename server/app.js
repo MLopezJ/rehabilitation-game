@@ -5,12 +5,13 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
+app.use(express.static('C:/Users/mlopez-as/Documents/rehabilitation-game/client/t-rex-runner'));
 
 //prevent cors errors 
 app.use(cors());
 
 app.get('/', function(req, res){
-    res.sendFile('rehabilitation-game/client' + '/index.html');
+    res.sendFile('C:/Users/mlopez-as/Documents/rehabilitation-game/client/t-rex-runner' + '/index.html');
 });
 
 module.exports = app;
