@@ -128,11 +128,11 @@
         MAX_CLOUDS: 6,
         MAX_OBSTACLE_LENGTH: 3,
         MAX_OBSTACLE_DUPLICATION: 2,
-        MAX_SPEED: 13,
+        MAX_SPEED: 5,
         MIN_JUMP_HEIGHT: 35,
         MOBILE_SPEED_COEFFICIENT: 1.2,
         RESOURCE_TEMPLATE_ID: 'audio-resources',
-        SPEED: 6,
+        SPEED: 3,
         SPEED_DROP_COEFFICIENT: 3
     };
 
