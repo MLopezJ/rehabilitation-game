@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for interact with an Arduino and a front-end client",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MLopezJ/rehabilitation-game.git"
+  },
+  "keywords": [
+    "server",
+    "rehabilitation",
+    "game"
+  ],
+  "author": "Mauro Lopez J",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MLopezJ/rehabilitation-game/issues"
+  },
+  "homepage": "https://github.com/MLopezJ/rehabilitation-game#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "serialport": "^8.0.6",
+    "socket.io": "^2.3.0"
+  }
+}
