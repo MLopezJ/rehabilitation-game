@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 // extract from chromium source code by @liuwayong
 (function () { 
-    /*
+    
     var socket = io();
     socket.on('chat message', function(msg){
         msg = msg.slice(0,-1);
@@ -11,7 +11,7 @@
             Runner.instance_.onKeyDown({keyCode: 38});
         }
     });
-    */
+    
     
     'use strict';
     /**
