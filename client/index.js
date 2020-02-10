@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 // extract from chromium source code by @liuwayong
 (function () { 
-    
+    /*
     var socket = io();
     socket.on('chat message', function(msg){
         msg = msg.slice(0,-1);
@@ -11,6 +11,7 @@
             Runner.instance_.onKeyDown({keyCode: 38});
         }
     });
+    */
     
     'use strict';
     /**
@@ -127,11 +128,11 @@
         MAX_CLOUDS: 6,
         MAX_OBSTACLE_LENGTH: 3,
         MAX_OBSTACLE_DUPLICATION: 2,
-        MAX_SPEED: 13,
+        MAX_SPEED: 5,
         MIN_JUMP_HEIGHT: 35,
         MOBILE_SPEED_COEFFICIENT: 1.2,
         RESOURCE_TEMPLATE_ID: 'audio-resources',
-        SPEED: 6,
+        SPEED: 3,
         SPEED_DROP_COEFFICIENT: 3
     };
 
@@ -674,7 +675,7 @@
          */
         onKeyDown: function (e) {
 
-            var socket = io();
+            //var socket = io();
 
             // Prevent native page scrolling whilst tapping on mobile.
             if (IS_MOBILE && this.playing) {
@@ -1413,7 +1414,8 @@
                 var minGap = Math.round(this.width * speed +
                     this.typeConfig.minGap * gapCoefficient);
                 var maxGap = Math.round(minGap * Obstacle.MAX_GAP_COEFFICIENT);
-                return getRandomNum(minGap, maxGap);
+                //return getRandomNum(minGap, maxGap);
+                return getRandomNum(300, 600);
             },
 
             /**
