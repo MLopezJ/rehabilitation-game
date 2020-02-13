@@ -1,10 +1,11 @@
 const SerialPort = require('serialport');
 const Readline = require('@serialport/parser-readline');
+const config = require('./config')
 
 exports.read = async (io) => {
 
-  const COM = 'COM6';
-  const mySerial = new SerialPort(COM,{baudRate:9600}, function (err) {
+  const COM = config.port;
+  const mySerial = new SerialPort(COM,{baudRate:config.serialBegin}, function (err) {
     if (err) {
       return console.log('Error: ', err.message)
       }
