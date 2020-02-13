@@ -5,3 +5,6 @@ On December, 2019 I dislocated my shoulder and for the rehabilitate I have to ma
  ## Preview 
 
  <img src="./img/3nafvm.gif" width="250" height="250">
+
+
+ ## -- project under development --
